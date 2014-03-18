@@ -1,0 +1,146 @@
+<!DOCTYPE HTML> 
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=false;">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<title>Blood Drive Registration</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" media"screen" />
+	<link href="blooddrive.css" rel="stylesheet" media"screen" />
+
+	<script src="blooddrive.js" type="text/javascript"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	
+	
+
+</head>
+
+<body>
+
+<form action="process.php" method="post"> <!--need to add actoin-->
+
+<h1>Blood Drive Registration</h1>
+<img id="redcross" src="http://ian.umces.edu/imagelibrary/albums/userpics/101505/normal_ian-symbol-health-care-red-cross.png" alt="red cross sign" />
+
+<fieldset>
+	<legend>Personal Information</legend>
+
+	<div class="jcm">
+		<label for="fullname" class="req">Participant name</label> <input id="fullname" name="fullname" placeholder="Full name" required="" type="text">
+	</div>
+	
+	<div class="jcm">
+		<label for="usremail" class="req">Email</label> 
+		<input id="usremail" name="usremail" placeholder="Email" required type="email"><!--verify @ sign -->
+    </div>
+
+    <div class="jcm">
+        <label for="usremail2" class="req">Verify Email</label> <input id="usremail2" name="usremail2" placeholder="Email" required type="email">
+
+	</div>
+
+</fieldset>
+
+<fieldset>
+	<legend>Event Information</legend>
+
+	<div class="jcm">
+		<label for="location" class="req">Location</label> 
+
+		<select name="location" required="">
+			<option value="SPH">School of Public Health</option>
+			<option value="NQ">North Quad</option>
+			<option value="UHC">University Health Center</option>
+			<option value="ML">Michigan League</option>
+			<option value="lib">Shapiro Undergrad Library</option>
+		</select>
+	</div>
+
+	<div class="jcm">
+		<label for="date" class="req">Date</label>
+		
+		<input type="checkbox" name="date" value="date1" required="">Monday, 24 March 2014 <input type="checkbox" name="date" value="date2">Wednesday, 2 April 2014
+	</div>
+
+	<div class="jcm">
+		<label for="time" class="req">Time</label> <!--15 minute intervals-->
+		
+		<!--<input type="checkbox" name="time" value="time1" required="">-->
+
+		<div id="menu">
+			<h3>8am - 12pm</h3>
+			<div>
+				<input type="checkbox" name="time" value="800">8:00am
+				<input type="checkbox" name="time" value="800">8:15am
+				<input type="checkbox" name="time" value="800">8:30am
+			</div>
+
+			<h3>1pm - 4pm</h3>
+			<div>
+				<input type="checkbox" name="time" value="800">1:00pm
+				<input type="checkbox" name="time" value="800">1:15pm
+				<input type="checkbox" name="time" value="800">1:30pm
+			</div>
+		</div>
+
+		<!--<input type="checkbox" name="date" value="time2">1pm - 4pm-->
+
+	</div>
+</fieldset>
+
+<fieldset>
+	<legend>Participant Health Information</legend>
+
+	<div class="jcm">
+		<label for="bloodgroup">Blood Group</label>
+		<select name="bloodgroup">
+			<option value="a">A</option>
+			<option value="ab">AB</option>
+			<option value="b">B</option>
+			<option value="o">O</option>
+			<option value="idk" selected>Not sure</option>
+		</select>
+	</div>
+
+	<div class="jcm">
+		<label for="bloodtype">Blood Type</label>
+		<input type="radio" name="bloodtype" value="pos">Rh+
+		<input type="radio" name="bloodtype" value="neg">Rh-
+	</div>
+
+</fieldset>
+
+<fieldset>
+	<legend>Allergies and other Health Information</legend>
+
+	<div class="jcm">
+		<label for="allergies">Allergies</label>
+		<input type="radio" name="allergies" value="yes">Yes
+		<input type="radio" name="allergies" value="no">No
+	</div>
+
+	<p>Please describe any allergies or pertinent health information.</p>
+
+<textarea id="hitext" placeholder="Describe health information here">
+</textarea>
+
+
+</fieldset>
+
+<fieldset>
+
+	<div class="jcm submit">
+	      	<div id="bottomButton">
+            	<input type="submit" value="Register">
+        	</div>
+</fieldset>
+</form>
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>
