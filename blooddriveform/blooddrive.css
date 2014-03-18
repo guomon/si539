@@ -1,0 +1,34 @@
+@media screen and (max-width: 750px) {
+
+	#redcross {
+		visibility: hidden;
+	}
+
+
+}
+
+h1 {
+	display: inline;
+}
+
+#redcross {
+	width: 3em;
+	display: inline;
+}
+
+#hitext {
+	width: 50%;
+	height: 100%;
+	padding-bottom: 10%;
+}
+
+.req {
+	color: #5C2F25;
+	border-radius: 5px;
+
+
+}
+
+.req:after {
+	content:"*";
+}
