@@ -1,9 +1,9 @@
 <?php
-    $filename = "SignUps2013.csv";
+    $filename = "blooddriveregis.csv";
     $exists = (file_exists($filename));
 
  	$handle = fopen($filename, 'a');
-	$msg = "Thank you for registering your child.\n";//EMail message
+	$msg = "Thank you for registering and for your kind donation.\n";//EMail message
 	$stringToAdd="";	//File into
 
 	if (!$exists){
@@ -26,9 +26,8 @@
 	//now close the file
 	fclose($handle); 
 	$to = $_POST["usremail"];
-	$headers = "From: ". $_POST["parent_name"] ."<".$_POST["usremail"]. ">\r\n";
-	
-	mail($to, 'Registration', $msg,$headers);
+		
+	mail($to, 'Registration', $msg);
 
 
 

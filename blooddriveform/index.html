@@ -6,7 +6,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 	<title>Blood Drive Registration</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet" media"screen" />
+	
 	<link href="blooddrive.css" rel="stylesheet" media"screen" />
 
 	<script src="blooddrive.js" type="text/javascript"></script>
@@ -18,7 +18,7 @@
 
 <body>
 
-<form action="process.php" method="post"> <!--need to add actoin-->
+<form name="myForm" action="process.php" method="post" onsubmit="return verifyForm(this);"> 
 
 <h1>Blood Drive Registration</h1>
 <img id="redcross" src="http://ian.umces.edu/imagelibrary/albums/userpics/101505/normal_ian-symbol-health-care-red-cross.png" alt="red cross sign" />
@@ -27,7 +27,7 @@
 	<legend>Personal Information</legend>
 
 	<div class="jcm">
-		<label for="fullname" class="req">Participant name</label> <input id="fullname" name="fullname" placeholder="Full name" required="" type="text">
+		<label for="fullname" class="req">Participant name</label> <input id="fullname" name="fullname" placeholder="Full name" required="" type="text" onchange="verifyFullname()">
 	</div>
 	
 	<div class="jcm">
